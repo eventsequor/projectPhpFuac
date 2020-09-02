@@ -29,10 +29,10 @@
                 </li>
             </ul>
             <?php
-            if (false) {
-                echo "<button class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</button>";
+            if (true) {
+                echo "<a href='view/login.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</a>";
             } else {
-                echo "<button class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Logout</button>";
+                echo "<a class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Logout</a>";
             };
 
             ?>

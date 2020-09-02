@@ -28,61 +28,68 @@
                     <a class="nav-link"  href="index.php">Information <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <?php            
+            <?php
             if(true){
-                echo "<a href='view/register.php' style='border-right: 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
+                echo "<a href='view/register.php' style='margin-right: 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
                 echo "<a href='view/login.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</a>";
             }else{
                 echo "<a class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Logout</a>";
             };
-
+            
             ?>
         </div>
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 mx-auto">
-                <div id="first">
-                    <div class="myform form ">
-                        <div class="logo mb-3">
-                            <div class="col-md-12 text-center">
-                                <h1>Login</h1>
-                            </div>
-                        </div>
-                        <form action="" method="post" name="login">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Password</label>
-                                <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
-                            </div>                            
-                            <?php
-                                if(isset($loginError)==true){
-                                    echo "<div class='form-group'>";
-                                    echo "<label style='color:red;' for='exampleInputEmail1'>Usuario y/o contraseña incorrecta</label>";
-                                    echo "</div> ";
-                                }
-                                ?>
-                            <div class="form-group">
-                                <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
-                            </div>
-                            <div class="col-md-12 text-center ">
-                                <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
-                            </div>
-                            <div class="form-group">
-                                <p class="text-center">Don't have account? <a href="#" id="signup">Sign up here</a></p>
-                            </div>
-                        </form>
-                    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/login/images/imgFuac01.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Curso electiva interdisiplinar</h1>
+                    <h3>
+                        <p>Este curso se trata de wordpress y php la primera tarea es hacer un login.</p>
+                    </h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/login/images/imgFuac02.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Pagina hecha con bootstrap</h1>
+                    <h3>
+                        <p>Esta página se basa en la documentación de bootstrap hecha por Eder Carbonero.</p>
+                    </h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/login/images/imgFuac03.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1><strong>Pendiente por un título</strong></h1>
+                    <h3>
+                        <p>Esta vista esta pendiente por ser implementada</p>
+                    </h3>
                 </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+
     <footer class="container">
         <p class="mt-5 mb-3 text-muted text-center">© Eder Leandro Carbonero Baquero. 2020.</p>
     </footer>
+
+    <script src="" async defer></script>
 </body>
 
 </html>
