@@ -83,9 +83,10 @@
             </div>
         </div>
     </div>
-    <footer class="container">
-        <p class="mt-5 mb-3 text-muted text-center">© Eder Leandro Carbonero Baquero. 2020.</p>
-    </footer>
+
 </body>
+<footer class="container">
+    <p class="mt-5 mb-3 text-muted text-center">© Eder Leandro Carbonero Baquero. 2020.</p>
+</footer>
 
 </html>

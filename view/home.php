@@ -3,7 +3,7 @@ $noExiteSession = true;
 session_start();
 if (isset($_SESSION['user'])) {
     $noExiteSession = false;
-} 
+}
 ?>
 <!DOCTYPE html>
 
@@ -94,11 +94,10 @@ if (isset($_SESSION['user'])) {
         </a>
     </div>
 
-    <footer class="container">
-        <p class="mt-5 mb-3 text-muted text-center">© Eder Leandro Carbonero Baquero. 2020.</p>
-    </footer>
-
     <script src="" async defer></script>
 </body>
+<footer class="container">
+    <p class="mt-5 mb-3 text-muted text-center">© Eder Leandro Carbonero Baquero. 2020.</p>
+</footer>
 
 </html>
