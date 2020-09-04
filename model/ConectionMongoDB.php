@@ -20,7 +20,7 @@ class ConectionMongoDB
         $this->collection = $db->users;
     }
 
-    public function findUser($userEmailFind)
+    public function verifyExistUser($userEmailFind)
     {
         try {
             $variable = $this->collection->findOne(array('userEmail' => $userEmailFind));
@@ -33,13 +33,25 @@ class ConectionMongoDB
         }
     }
 
-    public function updateUser()
+    public function verifyCredentials($userEmailFind, $passwordUser)
     {
-    }
 
+        try {
+            $variable = $this->collection->findOne(array('userEmail' => $userEmailFind));
+            $data = $variable->jsonSerialize();
+            if (($data->userEmail == $userEmailFind) && password_verify($passwordUser, $data->password)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+    
     public function insertUser($userEmail, $password)
     {
-        if (!$this->findUser($userEmail)) {
+        if (!$this->verifyExistUser($userEmail)) {
             $newUser = array(
                 'userEmail' => $userEmail,
                 'password' => password_hash($password, PASSWORD_DEFAULT, [25])

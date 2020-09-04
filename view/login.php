@@ -15,7 +15,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <a class="navbar-brand" href="../index.php"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
                 <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
             </svg></a>
@@ -25,14 +25,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link"  href="index.php">Information <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../index.php">Information <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <?php            
-            if(true){
-                echo "<a href='view/register.php' style='border-right: 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
-                echo "<a href='view/login.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</a>";
-            }else{
+            <?php
+
+
+            if (true) {
+                echo "<a href='register.php' style='border-right: 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
+                echo "<a href='login.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</a>";
+            } else {
                 echo "<a class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Logout</a>";
             };
 
@@ -49,7 +51,7 @@
                                 <h1>Login</h1>
                             </div>
                         </div>
-                        <form action="" method="post" name="login">
+                        <form action="../index.php" method="post" name="login">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -57,14 +59,16 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Password</label>
                                 <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
-                            </div>                            
+                            </div>
                             <?php
-                                if(isset($loginError)==true){
+                            if (isset($_GET["e"])) {
+                                if (strcmp($_GET["e"], "true") === 0) {
                                     echo "<div class='form-group'>";
                                     echo "<label style='color:red;' for='exampleInputEmail1'>Usuario y/o contraseña incorrecta</label>";
                                     echo "</div> ";
-                                }
-                                ?>
+                                };
+                            };
+                            ?>
                             <div class="form-group">
                                 <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
                             </div>

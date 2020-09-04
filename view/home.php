@@ -1,3 +1,10 @@
+<?php
+$noExiteSession = true;
+session_start();
+if (isset($_SESSION['user'])) {
+    $noExiteSession = false;
+} 
+?>
 <!DOCTYPE html>
 
 <head>
@@ -14,8 +21,9 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <a class="navbar-brand" href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
                 <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
             </svg></a>
@@ -25,17 +33,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link"  href="index.php">Information <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Information <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <?php
-            if(true){
-                echo "<a href='view/register.php' style='margin-right: 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
-                echo "<a href='view/login.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</a>";
-            }else{
-                echo "<a class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Logout</a>";
+
+            if ($noExiteSession) {
+                echo "<a href='register.php' style='margin-right: 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
+                echo "<a href='login.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</a>";
+            } else {
+                echo "<a href='logout.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Logout</a>";
             };
-            
+
             ?>
         </div>
     </nav>
