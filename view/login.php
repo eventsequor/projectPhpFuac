@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['user'])) {
+    header("Location:home.php");
+}
+
+?>
 <!DOCTYPE html>
 
 <head>
@@ -32,8 +39,7 @@
 
 
             if (true) {
-                echo "<a href='register.php' style='border-right: 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
-                echo "<a href='login.php' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Login</a>";
+                echo "<a href='register.php' style='border-right': 5px;' class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Register</a>";
             } else {
                 echo "<a class='btn btn-outline-secondary my-2 my-sm-0' type='submit'>Logout</a>";
             };

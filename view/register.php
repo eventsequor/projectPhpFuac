@@ -48,7 +48,7 @@
                                 <h1>Signup</h1>
                             </div>
                         </div>
-                        <form action="#" name="registration">
+                        <form action="#" name="registration" oninput='password2.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">First Name</label>
                                 <input type="text" name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Firstname">
@@ -64,6 +64,10 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Password</label>
                                 <input type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Password</label>
+                                <input type="password" name="password2" id="password2" class="form-control" aria-describedby="emailHelp" placeholder="Confirm password">
                             </div>
                             <div class="col-md-12 text-center mb-3">
                                 <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Get Started For Free</button>
