@@ -36,6 +36,11 @@ if (isset($_SESSION['user'])) {
                     <a class="nav-link" href="#">Information <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="jumboton.php">JumBoton <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
             <?php
 
             if ($noExiteSession) {

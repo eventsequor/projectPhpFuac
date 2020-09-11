@@ -16,7 +16,7 @@ class UserSession{
 
     public function closeSession(){
         echo "<h1>sesion cerrada</h>";
-        session_unset();
+        session_unset('user');
         session_destroy();
     }
 }
