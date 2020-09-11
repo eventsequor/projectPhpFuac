@@ -1,0 +1,5 @@
+Repositorio en git
+https://github.com/eventsequor/projectPhpFuac
+
+
+Nota la tarea de esta sessión se encuentra en la carpeta homeworkBootstrap del repositorio en git
